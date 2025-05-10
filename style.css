@@ -76,7 +76,7 @@ a:active {
 }
 
 
-h1{
+#hero-section h1{
   font-size: 60px;
   padding-top: 40px;
   padding-left: 120px;
@@ -140,7 +140,7 @@ img{
   height:100vh;
   display: flex;
   flex-direction:column;
-  gap:20px;
+  gap:40px;
   justify-content:center;
   overflow: hidden;
   
@@ -164,7 +164,7 @@ img{
 
 #poza_fondatoarei{
   width: 60%;
-  height: 70%;
+  height: 80%;
   box-shadow: 0 8px 6px -6px black;
   z-index:1;
   }
@@ -172,8 +172,8 @@ img{
   #rectangle{ 
     position:absolute;
     width: 60%;;
-    height: 70%;
-    top: 10%;
+    height: 80%;
+    top: 5%;
     right: 5%;
     background-color:white;
     box-shadow: 0 8px 6px -6px black;
@@ -190,45 +190,58 @@ img{
 #introducere2 h1{
   color:white;
   margin-bottom: 20px;
+  margin-left: 120px;
 }
 #introducere2 p{
 color: white;
 }
 
+h1{
+  font-size:60px;
+}
+
 /*Sectiunea 3- Categorii produse*/
 
 
-
-
-
-
-
 #categorii_produse{
-  background-color:beige;
+  background-color:white;
   height: 100vh;
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:60px;
-  padding-top: 60px;
-  padding-bottom:60px;
+  gap:80px;
 }
 
+#categorii_produse h1{
+  color: #374017;
+}
+#container-carduri{
+  display:flex;
+  flex-direction:row;
+  gap: 40px;
+
+}
+
+h3{
+  font-size:40px;
+  text-align:center;
+  color:white;
+  font-weight:400;
+  padding:20px;
+}
 .card{
-  background-color:white;
-  width:360px;
-  height: 520px;
+  background-color:#6D7656;
+  width:460px;
+  height: 620px;
   display:flex;
   flex-direction:column;
+  
 }
 .div-img{
   height:80%;
 }
 
-h3{
-  padding: 20px;
-  text-align:center;
-}
 
 .produs .div-img{
   height:50%;
