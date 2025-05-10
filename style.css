@@ -80,16 +80,10 @@ h1{
   font-size: 60px;
   padding-top: 40px;
   padding-left: 120px;
-  color:#374017;
+  color:#6D7656;
 
 }
 
- #despre_fondatoare{
-  background-color:white ;
-  display: flex;
-  height: 100vh;
-  
-}
 
 #introducere {
   width: 50%;
@@ -99,16 +93,8 @@ h1{
   flex-direction:column;
   gap: 20px;
   overflow: hidden;
-  
- 
-  
 }
 
-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 #vezi_produse{
   margin-top: 40px;
   max-width:300px;
@@ -120,60 +106,102 @@ img{
   font-size:24px;
   
 }
-
 i{
-  margin-left:8px;
- 
+  margin-left: 8px;
 }
 
+/*Sectiunea 2- Despre noi*/
+
+
+#despre_noi{
+  background-color:#6D7656 ;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content:space-around;
+  align-items:center;
+
+
+  
+}
+
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
 #introducere2{
-  width:50%;
+  width:50vw;
   height:100vh;
   display: flex;
   flex-direction:column;
-  border: 1px solid black;
   gap:20px;
+  justify-content:center;
   overflow: hidden;
   
+  
 
   
 }
-#despre_fondatoare{
-  
-  background-color:white;
-}
-#container_fondatoare{
-  position: relative;
-  width:50%;
-  height:auto;
-  border: 1px solid;
-  height:100%;
-}
 
-#rectangle{ 
-  position:absolute;
-  width: 400px;
-  height: 80%;
-  background-color:grey;
-  top: 10%;
-  right:25%;
-  box-shadow: 0 8px 6px -6px black;
+#container_poza{
+  width:50vw;
+  height:100vh;
  
+  display:flex;
+  justify-content: flex-end;
+  align-items:center;
+  position:relative;
+ 
+  
 }
+
+
 #poza_fondatoarei{
-  width: 400px;
-  height: 80%;
-    position:absolute;
-    right:20%;
-    top: 15%;
+  width: 60%;
+  height: 70%;
   box-shadow: 0 8px 6px -6px black;
+  z-index:1;
   }
 
+  #rectangle{ 
+    position:absolute;
+    width: 60%;;
+    height: 70%;
+    top: 10%;
+    right: 5%;
+    background-color:white;
+    box-shadow: 0 8px 6px -6px black;
+    z-index:0;
+   
+  }
 #introducere2 p, #introducere p{
   padding-left: 120px;
   padding-right: 150px;
   line-height: 1.5;
+  
 }
+
+#introducere2 h1{
+  color:white;
+  margin-bottom: 20px;
+}
+#introducere2 p{
+color: white;
+}
+
+/*Sectiunea 3- Categorii produse*/
+
+
+
+
+
+
 
 #categorii_produse{
   background-color:beige;
