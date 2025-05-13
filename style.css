@@ -11,7 +11,7 @@ body{
 /*Header cu logo si nav-bar*/
 
 header{
-  width: 100%;
+  width: 100vw;
   display:flex;
   gap: 20px;
   background-color: #6D7656;
@@ -26,7 +26,7 @@ header{
   margin-left: 20px;
 }
 nav{
-  width: 100%;
+  width: 100vw;
   display:flex;
   justify-content: center;
   align-items:center;
@@ -85,7 +85,7 @@ a:active {
 }
 
 
-#introducere {
+#hero-text {
   width: 50%;
   height:auto;
   display: flex;
@@ -95,7 +95,7 @@ a:active {
   overflow: hidden;
 }
 
-#vezi_produse{
+.vezi_produse{
   margin-top: 40px;
   max-width:300px;
   border-radius: 12px;
@@ -135,7 +135,7 @@ img{
 
 
 
-#introducere2{
+#introducere{
   width:50vw;
   height:100vh;
   display: flex;
@@ -180,45 +180,48 @@ img{
     z-index:0;
    
   }
-#introducere2 p, #introducere p{
+#introducere p, #hero-text p{
   padding-left: 120px;
   padding-right: 150px;
   line-height: 1.5;
   
 }
 
-#introducere2 h1{
+#introducere h1{
   color:white;
   margin-bottom: 20px;
   margin-left: 120px;
 }
-#introducere2 p{
+#introducere p{
 color: white;
 }
 
 h1{
   font-size:60px;
+  color: #374017;
 }
 
 /*Sectiunea 3- Categorii produse*/
 
 
-#categorii_produse{
+#categorii_produse {
   background-color:white;
   height: 100vh;
+  width:100vw;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   gap:80px;
+  padding: 40px;
 }
 
-#categorii_produse h1{
-  color: #374017;
-}
-#container-carduri{
+
+  
+
+.container-carduri{
   display:flex;
-  flex-direction:row;
+  flex-direction:wrap;
   gap: 40px;
 
 }
@@ -230,19 +233,125 @@ h3{
   font-weight:400;
   padding:20px;
 }
+
 .card{
   background-color:#6D7656;
   width:460px;
   height: 620px;
   display:flex;
   flex-direction:column;
-  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 20px;
 }
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  background-color: #374017;
+}
+  
+
+
+
 .div-img{
   height:80%;
 }
+/*Sectiunea 4- Produse*/
 
-
-.produs .div-img{
+.div-img2{
   height:50%;
+}
+
+#produse{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:#6D7656;
+  width:100vw;
+  height:100vh;
+  gap:80px;
+  padding: 40px;
+  padding-bottom:120px;
+  
+
+}
+
+#produse h1{
+  color:white;
+  margin-top: 120px;
+}
+
+#produse .vezi_produse{
+  margin-left: 0;
+
+}
+.container-produse{
+  display:flex;
+  flex-direction:wrap;
+  justify-content:center;
+  align-items:center;
+  
+}
+
+.card-produs{
+    background-color:white;
+    width:460px;
+    height: 620px;
+    display:flex;
+    flex-direction:column;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease-in-out;
+    gap: 20px;
+    position: relative;
+    
+}
+
+.card-produs:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+
+h5{
+  font-size:24px;
+}
+
+.card-produs p{
+  font-weight: 400;
+}
+
+
+
+.blocul_pretului{
+  position: absolute;
+  bottom: 60px;
+  font-weight: 600;
+  
+  
+}
+
+.nume_pret{
+  color:#374017;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.pret_produs{
+  font-size: 18px;
+}
+.buton_cos{
+  font-weight: 500;
+  background-color: #374017;
+  border-radius: 12px;
+  padding:12px;
+  color:white;
+  
+}
+.span_buton{
+ margin-left: 200px;
+}
+
+button:hover{
+  background-color: #6D7656;
+
 }
