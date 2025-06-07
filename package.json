@@ -1,0 +1,31 @@
+{
+  "name": "proiect-final",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoGit2021/FE_ProiectFinal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoGit2021/FE_ProiectFinal/issues"
+  },
+  "homepage": "https://github.com/NicoGit2021/FE_ProiectFinal#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "json-server": "^1.0.0-beta.3",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "parcel": "^2.15.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0"
+  }
+}

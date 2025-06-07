@@ -3,15 +3,19 @@
   margin: 0;
   padding:0;
 }
+
 body{
   font-family: Lato, sans-serif;
   box-sizing: border-box;
+  height: 100%;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /*Header cu logo si nav-bar*/
 
 header{
-  width: 100vw;
+  width: 100%;
   display:flex;
   gap: 20px;
   background-color: #6D7656;
@@ -26,12 +30,11 @@ header{
   margin-left: 120px;
 }
 nav{
-  width: 100vw;
+  width: 100%;
   display:flex;
   justify-content: center;
   align-items:center;
   gap: 60px;
-  color:green;
   font-size: 24px;
   font-weight: 400;
 
@@ -66,12 +69,14 @@ a:active {
 
 #hero-section{
   height:100vh;
+  width: 100%;
   background-image: url("Imagini/hero-plant.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display:flex;
   flex-direction: row ;
+ 
 
 }
 
@@ -86,7 +91,7 @@ a:active {
 
 
 #hero-text {
-  width: 50%;
+  width: 50vw;
   height:auto;
   display: flex;
   justify-content: center;
@@ -117,7 +122,7 @@ i{
 #despre_noi{
   background-color:#6D7656 ;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   justify-content:space-around;
   align-items:center;
@@ -131,6 +136,7 @@ img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+ 
 }
 
 
@@ -166,7 +172,7 @@ img{
 #poza_fondatoarei{
   width: 60%;
   height: 80%;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px rgb(68, 68, 68);
   z-index:1;
   }
 
@@ -177,7 +183,7 @@ img{
     top: 5%;
     right: 5%;
     background-color:white;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px rgb(68, 68, 68);
     z-index:0;
    
   }
@@ -188,11 +194,13 @@ img{
   
 }
 
-#introducere h1{
+#introducere h1 {
   color:white;
   margin-bottom: 20px;
   margin-left: 120px;
 }
+
+
 #introducere p{
 color: white;
 }
@@ -205,7 +213,7 @@ h1{
 /*Sectiunea 3- Categorii produse*/
 
 
-#categorii_produse {
+/* #categorii_produse {
   background-color:white;
   height: 100vh;
   width:100vw;
@@ -213,19 +221,21 @@ h1{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:80px;
-  padding: 40px;
-}
+  gap:80px; 
+
+} */
 
 
   
 
 .container-carduri{
+  
   display:flex;
   flex-direction:wrap;
   gap: 40px;
 
 }
+
 
 h3{
   font-size:40px;
@@ -235,30 +245,34 @@ h3{
   padding:20px;
 }
 
-.card{
+/* .card_categorie{
   background-color:#6D7656;
   width:460px;
   height: 620px;
   display:flex;
   flex-direction:column;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   padding: 20px;
   border-radius:12px;
-}
+  cursor:pointer;
+} */
 
-.card:hover {
+/* .card_categorie:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
   background-color: #374017;
-  border: 2px solid lightgray;
-}
+  transform: scale(1.05);
   
+}
+   */
 
 
-
+/* 
 .div-img{
   height:80%;
-}
+  
+} */
+
 /*Sectiunea 4- Produse*/
 
 .div-img2{
@@ -270,18 +284,28 @@ h3{
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  background-color:#6D7656;
+  background-color:white;
   width:100vw;
-  height:100vh;
+  height:auto;
   gap:80px;
  
   padding-bottom:120px;
-  
 
 }
 
+#contCardProduse{
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 60px;
+  align-items: center;
+  width:100vw;
+  height:auto;
+}
+
+
 #produse h1{
-  color:white;
+  color: #6D7656;
   margin-top: 120px;
 }
 
@@ -296,6 +320,7 @@ h3{
   justify-content:center;
   align-items:center;
   
+  
 }
 
 .card-produs{
@@ -306,7 +331,7 @@ h3{
     flex-direction:column;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    transition: box-shadow 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     gap: 20px;
     position: relative;
     border-radius:12px;
@@ -315,7 +340,7 @@ h3{
 
 .card-produs:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
-  border: 2px solid lightgray;
+  transform: scale(1.05);
  
 }
 
@@ -331,8 +356,13 @@ h5{
 
 .blocul_pretului{
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   font-weight: 600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  left: 12px;
+  
   
   
 }
@@ -356,7 +386,7 @@ h5{
   
 }
 .span_buton{
- margin-left: 200px;
+ margin-left:260px;
 }
 
 button:hover{
@@ -370,7 +400,7 @@ button:hover{
 
 
 
-
+/* Slider cu recenzii */
 
 #recenzii{
       display: flex;
@@ -378,22 +408,26 @@ button:hover{
       align-items: center;
       flex-direction:column;
       height: 100vh;
-      width:100vw;
-      background: #eee;
+      width:100%;
+      background: #6D7656;
       gap:60px;
-      
-      
       
 }
 
+#recenzii h1 {
+  color:white;
+  
+ 
+}
 
 .slider {
   position: relative;
-  width: 70%;
+  width:70%;
   height: 60%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #eee;
 }
 
 .slides {
@@ -406,7 +440,6 @@ button:hover{
   width: 100%;
   flex-shrink: 0;
   display:flex;
-  
   justify-content:center;
   padding-top:5%;
   gap: 20px;
@@ -423,8 +456,8 @@ button:hover{
   justify-content:center;
   align-items:center;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(75, 74, 74, 0.1); 
+  transition: all 0.5s ease-in-out;
   gap: 20px;
   position: relative;
   border-radius:12px;
@@ -433,7 +466,7 @@ button:hover{
 
 .card-recenzie:hover {
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
-border: 2px solid lightgray;
+transform: scale(1.05);
 
 }
 
@@ -468,4 +501,66 @@ border: 2px solid lightgray;
 
 .prev:hover, .next:hover {
   background-color: #565e44;
+} 
+
+/* #produse_exemplu{
+  width: 100vw;
+  height: auto;
+  background-color: red;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+ 
+
+}
+
+.exemplu{
+  width: 200px;
+
+} */
+
+
+/* Stiluri shopping cart */
+#shopping-cart{
+position:absolute;
+top:100px;
+right:0;
+width: 40vw;
+height: auto;
+background-color: #60684c;
+display:none;
+
+text-align:center;
+line-height: 2.5;
+color:white;
+border: 2px solid rgb(187, 187, 187);
+/* box-shadow:0 8px 20px rgba(0, 0, 0, 0.15); */
+
+}
+
+
+ul{
+  list-style-type: none;
+}
+#cart-btn{
+  background-color:#6D7656;
+  border:1px solid white;
+  padding: 8px;
+  display:flex;
+  align-items:center;
+  color:white;
+  font-size:20px;
+}
+
+.btn-remove {
+  background-color: #374017;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.btn-remove:hover {
+  background-color: #61702c;
 }

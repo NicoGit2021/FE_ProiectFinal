@@ -13,10 +13,14 @@
       <div id="logo" class="img-container"><img src="Imagini/Plantiful-logo2.png" alt = "plant in a pot logo"></img></div>
       <nav>
         <a href="#despre_noi">Despre noi</a>
-        <a href="#categorii_produse">Produse</a> 
+        <a href="#produse">Produse</a> 
         <a href="#contacte">Contacte</a>
         <a href="#recenzii">Recenzii</a>
         <a href ="#livrare" >Livrare</a>
+        <button id="cart-btn" type="button" class="btn">
+          <span id="show-hide-cart">Deschide coș</span> 
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
       </nav>
     </header>
     <main>
@@ -46,36 +50,36 @@
         </article>
      </section>
 
-<section id="categorii_produse">
+<!-- <section id="categorii_produse">
   <h1>Categorii de produse</h1>
   <section class="container-carduri">
-    <article  class="card" id="plante_camera">
+    <article  class="card_categorie" id="plante_camera">
       <div class="div-img">
         <img src="Imagini/pexels-anna-nekrashevich-8989355.jpg" alt="planta de camera pe masa"></img>
       <div>
       <h3><a href="#plante_camera">Plante de camera</a></h3>
     </article>
-    <article class="card" id="plante_gradina">
+    <article class="card_categorie" id="plante_gradina">
       <div class="div-img">
       <img src="imagini/pexels-scottwebb-212942.jpg" alt="plante de gradina"></img>
       <div>
       <h3><a href="#plante_gradina">Plante de gradina</a></h3>
     </article>
-    <article class="card" id="accesorii">
+    <article class="card_categorie" id="accesorii">
       <div class="div-img">
       <img src="imagini/tools.jpg" alt="accesorii de gradina"></img>
       <div>
       <h3><a href="#accesorii">Accesorii</a></h3>
     </article>
   </section>
-</section>
+</section> -->
 
 
     
     <section id="produse">
       <h1>Plante de camera</h1>
-      <section class="container-carduri">
-        <article  class="card-produs">
+      <section id="contCardProduse">
+        <!-- <article  class="card-produs">
           <div class="div-img2">
             <img src="Imagini/ficus-elastica.jpg" alt="ficus elastica"></img>
           </div>
@@ -107,101 +111,138 @@
             <span class="nume_pret">Preț:</span><span class="pret_produs">350 MDL</span>
             <span class="span_buton"><button class="buton_cos">Adaugă în coș</button></span>
           </div>
-        </article>
+        </article> -->
       </section>
-      <button type="button" class="vezi_produse">Vezi produse<i class="fa-solid fa-arrow-right"></i></button>
+      <button type="button" id="loadMore" class="vezi_produse">Vezi produse<i class="fa-solid fa-arrow-right"></i></button>
     </section>
 
-    <section id="recenzii">
-    <h1>Recenzii</h1>
-    <div class="slider">
-      <div class="slides" id="slides">
-        <div class="slide">
-          <!-- <div class="img-slide"><img src="Imagini/hero-plant.jpg" alt="1"></div> -->
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
+ <section id="recenzii">
+  <h1>Recenzii</h1>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
           </div>
-        <div class="slide">
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-        </div>
-        <div class="slide">
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-          <article class="card-recenzie">
-            <div class="div-img2">
-              <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
-            </div>
-            <h5>Sansevieria (limba soacrei)</h5>
-            <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
-            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </article>
-        </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
       </div>
-      <div class="navigation">
-        <button class="prev" onclick="moveSlide(-1)">❮</button>
-        <button class="next" onclick="moveSlide(1)">❯</button>
+
+      <div class="slide">
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+      </div>
+
+      <div class="slide">
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
+        <article class="card-recenzie">
+          <div class="div-img2">
+            <img src="Imagini/sansevieria.jpg" alt="sansevieria"></img>
+          </div>
+          <h5>Sansevieria (limba soacrei)</h5>
+          <p> Foarte rezistentă, cu frunze lungi, verticale, verde-închis cu margini galbene. Ideală pentru începători, tolerează lumină slabă și secetă.</p>
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        </article>
       </div>
     </div>
+
+
+      <div class="navigation">
+
+
+        <button class="prev">❮</button>
+
+
+        <button class="next">❯</button>
+
+
+      </div>
+
+
+    </div>
+
+
   </section>
+
+
+  <!-- Shopping Cart Exemplu  -->
+   
+<section id="container-cart">
+  <!-- Exemple de produs -->
+<!-- <div id="produse_exemplu">
+  <button class="exemplu" onclick="addToCart('Apple', 19999)">Apple</button>
+  <button class="exemplu" onclick="addToCart('Samsung', 14999)">Samsung</button>
+  <button class="exemplu" onclick="addToCart('Xiaomi', 9999)">Xiaomi</button>
+</div> -->
+
+
+
+
+<!-- ShoppingCart Interfata -->
+  <section id="shopping-cart">
+    <h2>Cos de cumparaturi</h2>
+    <ul id="cart-list"></ul>
+    <p>Pret total: <span id="total"></span> MDL</p>
+    <button id="sterge-cos-btn">Sterge cos</button>
+  </section>
+    </section>
+   
 
 
 
