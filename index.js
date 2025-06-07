@@ -203,6 +203,7 @@ const loadMoreBtn = document.querySelector("#loadMore");
 function loadProducts() {
   if (startingIndex >= plante_interior.length) {
     loadMoreBtn.disabled = true;
+     loadMoreBtn.removeEventListener("click", loadProducts);
     return;
   }
   const produseDeIncarcat = plante_interior.slice(startingIndex, endingIndex);
@@ -210,28 +211,24 @@ function loadProducts() {
     const article = creareCardProdus(produs);
     contCardProduse.insertAdjacentElement("beforeend", article);
 }
-  };
-
   startingIndex = endingIndex;
   endingIndex = Math.min(endingIndex + 6, plante_interior.length);
+  };
+
+  
 
   
   if (startingIndex >= plante_interior.length) {
     loadMoreBtn.disabled = true;
+     loadMoreBtn.removeEventListener("click", loadProducts);
   }
-
 
 
 loadProducts();
 
 loadMoreBtn.addEventListener("click", loadProducts);
 
-const butoaneCos = document.querySelectorAll(".buton_cos");
-butoaneCos.forEach((buton)=>
-  buton.addEventListener("click", ()=>{
-    addToCart(produs.id, produs.price);
-  })
-)
+
 // Cosul de cumparaturi
 
 

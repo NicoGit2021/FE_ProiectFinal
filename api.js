@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/produse_interior"
+let url = "http://localhost:3000/plante_interior"
 
 // Create
 export async function createProduct(produs){
