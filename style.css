@@ -100,7 +100,7 @@ a:active {
   overflow: hidden;
 }
 
-.vezi_produse{
+.vezi_produse {
   border:none;
   margin-top: 40px;
   max-width:300px;
@@ -210,31 +210,7 @@ h1{
   color: #374017;
 }
 
-/*Sectiunea 3- Categorii produse*/
 
-
-/* #categorii_produse {
-  background-color:white;
-  height: 100vh;
-  width:100vw;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:80px; 
-
-} */
-
-
-  
-
-/* .container-carduri{
-  
-  display:flex;
-  flex-direction:wrap;
-  gap: 40px;
-
-} */
 
 
 h3{
@@ -245,33 +221,6 @@ h3{
   padding:20px;
 }
 
-/* .card_categorie{
-  background-color:#6D7656;
-  width:460px;
-  height: 620px;
-  display:flex;
-  flex-direction:column;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-  transition: all 0.5s ease-in-out;
-  padding: 20px;
-  border-radius:12px;
-  cursor:pointer;
-} */
-
-/* .card_categorie:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
-  background-color: #374017;
-  transform: scale(1.05);
-  
-}
-   */
-
-
-/* 
-.div-img{
-  height:80%;
-  
-} */
 
 /*Sectiunea 4- Produse*/
 
@@ -390,13 +339,10 @@ h5{
 }
 
 button:hover{
-  background-color: #565e44;
+  /* background-color: #565e44; */
+ background-color: #8e9c59;
 
 }
-
-
-
-
 
 
 
@@ -478,7 +424,9 @@ transform: scale(1.05);
   
   
 }
-
+.stars{
+ color:#8e9c59;
+}
 
 .navigation {
   position: absolute;
@@ -503,21 +451,7 @@ transform: scale(1.05);
   background-color: #565e44;
 } 
 
-/* #produse_exemplu{
-  width: 100vw;
-  height: auto;
-  background-color: red;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
- 
 
-}
-
-.exemplu{
-  width: 200px;
-
-} */
 
 
 /* Stiluri shopping cart */
@@ -534,14 +468,31 @@ text-align:center;
 line-height: 2.5;
 color:white;
 border: 2px solid rgb(187, 187, 187);
-/* box-shadow:0 8px 20px rgba(0, 0, 0, 0.15); */
+box-shadow:0 8px 20px rgba(0, 0, 0, 0.15);
 
 }
 
+#cart-list li {
+  color: white;
+  font-size: 16px;
+  display:flex;
+  justify-content:center;
+  padding: 20px;
+}
 
 ul{
-  list-style-type: none;
+  list-style-type:none;
 }
+
+#pret-cos-total{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom:20px;
+  border: 1px solid white;
+}
+
+
+
 #cart-btn{
   background-color:#6D7656;
   border:1px solid white;
@@ -552,19 +503,47 @@ ul{
   font-size:20px;
 }
 
-.btn-remove {
-  background-color: #374017;
+.btn-remove  {
+  background-color: #374017 ;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 5px;
   cursor: pointer;
   border-radius: 12px;
+  margin-left: 20px
 }
 
 .btn-remove:hover {
-  background-color: #61702c;
+  background-color: #f16350;
 }
 
+
+#sterge-cos-btn, #trimite-comanda{
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+#sterge-cos-btn{
+  background-color:#f16350;
+}
+
+ #trimite-comanda{
+  background-color: #374017;
+ }
+
+ #sterge-cos-btn:hover{
+  background-color:#f05d4a;
+}
+
+ #trimite-comanda:hover{
+  background-color: #8e9c59;
+ }
 
 /* Footer */
 
@@ -639,3 +618,73 @@ color:#374017;
   height: 100%;      
   background-color:#374017; 
 }
+
+
+/* Livrare */
+#pagina-livrare{
+  display:flex;
+  width:100%;
+  height:100%;
+  background-color:white;
+  flex-direction:column;
+  gap:60px;
+  padding:40px;
+}
+
+#pagina-livrare h2{
+font-size: 32px;
+color:#6D7656;
+}
+
+#pagina-livrare h5{
+  font-size:24px;
+  color:#6D7656;
+  
+}
+#conditii-livrare{
+  width:100%;
+  line-height:1.5;
+
+}
+
+#formular{
+  margin-top:20px;
+  gap:20px;
+  padding:20px;
+  width: 50%;
+  /* height:auto; */
+  border-radius:12px;
+  background-color:#eee;
+  border: 1px solid #6D7656;
+  display:flex;
+  flex-direction:column;
+  transition:all 0.5s ease-in-out;
+}
+
+input:focus{
+background-color:rgb(208, 243, 208);
+transform: scale(1.05);
+}
+
+#input-buttons{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+.input-btn{
+  width: 200px;
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color:#374017
+}
+
+
+/* .input-btn:hover{
+  background-color:#60684c;
+} */
+

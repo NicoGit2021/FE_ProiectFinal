@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Livrare</title>
+</head>
+<body>
+    <main id="pagina-livrare">
+        <section id="conditii-livrare">
+            <h2>Conditiile de livrare ale magazinului Plantyful</h2>
+            <p>Livrarea plantelor de cameră în Chișinău se efectuează în 2 zile lucrătoare de la confirmarea comenzii. În restul localităților țării - 3-4 zile lucrătoare. </p>
+            <p>Comenzile cu o valoare mai mare de 500 MDL beneficiază de livrare gratuită în raza municipiului Chișinău.</p>
+            <p>Toate plantele sunt ambalate cu grijă pentru a fi transportate în siguranță, iar livrarea se face direct la adresa specificată de client.</p>
+    </section>
+        
+        <section id="sectie-fomular">
+        <h5>Pentru a trimite comanda, te rog sa introduci datele necesare in formularul de mai jos.</h5>
+        <form id="formular" autocomplete="off" action="/action_page.php" method="post">
+            <h5>Informații de contact</h5>
+            <input type="text" placeholder="Prenume*"  name="prenume" required>
+            <input type="text" placeholder="Nume de familie*" name="nume_de_familie" required>
+            <input type="text" placeholder="Numar de telefon*" name="numar_de_telefon" required>
+            <input type="email" placeholder="E-mail*" name="email" required>
+            <input type="tel" placeholder="Nr. de telefon*" name="telefon" required> 
+            <hr>
+            <h5>Livrare la domiciliu</h5>
+            <label for="zi_livrare">Introdu ziua de livrare:</label>
+            <input id="zi_livrare" type="date" name="zi_livrare"  required>
+            <label for="localitate">Alege orasul de livrare.<i>Daca nu il gasesti in lista, scrie-l in campul alaturat.</i></label>
+            <select id="localitate" name="localitate">
+            <option selected>Chisinau</option>
+            <option>Balti</option>
+            <option>Ungheni</option>
+            <option>Criuleni</option>
+            <option>Hincesti</option>
+            <option>Altul</option>
+            </select>
+            <input type="text" placeholder="Oras*" name="oras">
+       
+            <input type="text" placeholder="Strada*" name="strada" required>
+       
+            <input type="text" placeholder="Nr. casei/ap.*" name="nr_casa" required>
+            <hr>
+            <h5>Metoda de achitare</h5>
+            <input type="radio" id="plata_online" name="metoda_de_plata">
+            <label for="plata_online">Plata online</label>
+            
+            <input type="radio" id="credit" name="metoda_de_plata">
+            <label for="credit">In credit</label>
+            
+            <input type="radio" id="transfer" name="metoda_de_plata">
+            <label for="transfer">Transfer bancar</label>
+        
+            <input type="radio" id="numerar" name="metoda_de_plata">
+            <label for="numerar">In numerar</label>
+        
+            <input type="radio" id="card_livrare" name="metoda_de_plata" checked>
+            <label for="card_livrare">Card bancar la livrare</label>
+        
+            <div id="ToR"><input type="checkbox" id="checkbox" name="acord_livrare" required>
+            <label for="checkbox">Am citit și sunt de acord cu condițiile de livrare/achitare și condițiile de returnare/anulare</label></div>
+            
+            <textarea cols="70" rows="3" placeholder="Comentarii despre comanda" name="comentarii"></textarea>
+        
+            <div id="input-buttons"><button class="input-btn" type="submit" value="Submit">Plaseaza comanda</button>
+            <button  class="input-btn" type="reset" value="Reset">Reseteaza</button></div>
+        </form>
+        </section>
+    </main>
+</body>
+</html>

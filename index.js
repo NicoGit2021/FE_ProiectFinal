@@ -33,108 +33,45 @@ buttonPrevSlide.addEventListener("click", () => {
 
 // ----------------------------------------------------------------------------
 
-let plante_interior = [
-        {
-            "id": 1,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "ficus elastica", 
-            "title": "Ficus elastica (Ficus cauciuc)",
-            "description": "Plantă cu frunze mari, lucioase, verzi sau cu margini roșiatice. Ușor de întreținut, preferă lumină indirectă și udare moderată.",
-            "price": 500
-        },
-        {
-            "id": 2,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "monstera deliciosa",
-            "title": "Monstera deliciosa",
-            "description": "Cunoscută pentru frunzele mari, perforate, cu aspect exotic. Are nevoie de lumină filtrată și umiditate moderată.",
-            "price": 400
-        }, 
-        {
-            "id": 3,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "monstera deliciosa",
-            "title": "Ficus lyrata",
-            "description": " Frunze mari, lucioase, în formă de vioară. Preferă lumină puternică și udare regulată.",
-            "price": 600
-        }, 
-        {
-            "id": 4,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "monstera deliciosa",
-            "title": "Ficus lyrata",
-            "description": " Frunze mari, lucioase, în formă de vioară. Preferă lumină puternică și udare regulată.",
-            "price": 600
-        }, 
-        {
-            "id": 5,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "monstera deliciosa",
-            "title": "Dracaena marginata",
-            "description": "Frunze subțiri, lungi, cu margini roșii. Preferă lumină indirectă și udare moderată.",
-            "price": 450
-        },
-        {
-            "id": 6,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "monstera deliciosa",
-            "title": "Philodendron",
-            "description": "Planta cu frunze mari, verzi, ușor de întreținut. Se adaptează la condiții de lumină scăzută.",
-            "price": 450
-          },
-          {
-            "id": 7,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "sansevieria",
-            "title": "Sansevieria trifasciata (Limba soacrei)",
-            "description": "Frunze verticale, verzi cu dungi galbene. Foarte rezistentă și ușor de întreținut.",
-            "price": 300
-          },
-          {
-            "id": 8,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "epipremnum aureum",
-            "title": "Epipremnum aureum (Pothos)",
-            "description": "Planta cățărătoare cu frunze verzi sau variegate. Crește rapid și se adaptează ușor.",
-            "price": 250
-          },
-          {
-            "id": 9,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "codiaeum variegatum",
-            "title": "Codiaeum variegatum (Croton)",
-            "description": "Frunze colorate în nuanțe de galben, roșu și verde. Necesită lumină puternică și udare regulată.",
-            "price": 550
-          },
-          {
-            "id": 10,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "neoregalia",
-            "title": "Neoregalia",
-            "description": "Planta cu frunze colorate și flori spectaculoase. Preferă lumină indirectă și umiditate ridicată.",
-            "price": 650
-          },
-          {
-            "id": 11,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "bromelia",
-            "title": "Bromelia",
-            "description": "Planta cu flori colorate și frunze rigide. Necesită lumină puternică și udare moderată.",
-            "price": 700
-          },
-          {
-            "id": 12,
-            "img": "Imagini/ficus-elastica.jpg",
-            "alt": "alocasia polly",
-            "title": "Alocasia Polly",
-            "description": "Frunze mari, lucioase, în formă de inimă. Preferă lumină indirectă și umiditate ridicată.",
-            "price": 600
-          }
-        ]
 
 // Creare carduri de produse
 
-let contCardProduse = document.querySelector("#contCardProduse");
+const contCardProduse = document.querySelector("#contCardProduse");
+const loadMoreBtn = document.querySelector("#loadMore");
+let plante_interior = [];
+
+let startingIndex = 0;
+let endingIndex = 6;
+
+async function fetchProducts() {
+  try{
+  const response = await fetch("http://localhost:3000/plante_interior");
+  const produse = await response.json();
+  plante_interior = produse;
+  loadProducts();} 
+  catch(error)
+  {
+    console.log(error);
+  }
+}
+
+function loadProducts(){
+  if (startingIndex >= plante_interior.length) {
+    loadMoreBtn.disabled = true;
+    loadMoreBtn.removeEventListener("click", loadProducts);
+    alert("Nu mai sunt produse de afisat")
+    return;
+  }
+   const produseDeIncarcat = plante_interior.slice(startingIndex, endingIndex);
+  for (let produs of produseDeIncarcat) {
+    const card = creareCardProdus(produs);
+    contCardProduse.appendChild(card);
+  }
+
+  startingIndex = endingIndex;
+  endingIndex = Math.min(endingIndex + 6, plante_interior.length);
+}
+
 
 
 function creareCardProdus(produs){
@@ -177,6 +114,8 @@ imgProdus.src = produs.img;
  
   butonCos.addEventListener("click", () => {
     addToCart(produs.title, produs.price);
+    alert("Produsul a fost adaugat in cos");
+    
   });
   
    spanButon.appendChild(butonCos);
@@ -193,40 +132,9 @@ imgProdus.src = produs.img;
 return article;
 }
 
-
-// Incarcare produse pe pagina
-
-let startingIndex = 0;
-let endingIndex = 6;
-const loadMoreBtn = document.querySelector("#loadMore");
-
-function loadProducts() {
-  if (startingIndex >= plante_interior.length) {
-    loadMoreBtn.disabled = true;
-     loadMoreBtn.removeEventListener("click", loadProducts);
-    return;
-  }
-  const produseDeIncarcat = plante_interior.slice(startingIndex, endingIndex);
-  for (let produs of produseDeIncarcat) {
-    const article = creareCardProdus(produs);
-    contCardProduse.insertAdjacentElement("beforeend", article);
-}
-  startingIndex = endingIndex;
-  endingIndex = Math.min(endingIndex + 6, plante_interior.length);
-  };
-
-  
-
-  
-  if (startingIndex >= plante_interior.length) {
-    loadMoreBtn.disabled = true;
-     loadMoreBtn.removeEventListener("click", loadProducts);
-  }
-
-
-loadProducts();
-
 loadMoreBtn.addEventListener("click", loadProducts);
+fetchProducts();
+
 
 
 // Cosul de cumparaturi
@@ -248,7 +156,7 @@ cartBtn.addEventListener("click", () => {
 });
 
 // -----------------------------------
-cartStorage = localStorage.getItem('cart');
+let cartStorage = localStorage.getItem('cart');
 if(cartStorage !== undefined){
   cart = JSON.parse(cartStorage);
   updateDOM();
@@ -292,7 +200,7 @@ let total = 0;
 for (let product in cart){
   total += cart[product].pret * cart[product].cantitate;
   let li = document.createElement('li');
-  li.innerHTML = `${product} - ${cart[product].cantitate} unitati. Pret per unitate: ${cart[product].pret}`;
+  li.innerHTML = `${product} - ${cart[product].cantitate} unitati. <br> Pret per unitate: ${cart[product].pret} MDL`;
   let buttonRemove = document.createElement('button');
   buttonRemove.classList.add("btn-remove");
   buttonRemove.textContent = 'Scoate o unitate';
@@ -309,7 +217,6 @@ const butonStergeCos = document.querySelector("#sterge-cos-btn");
 butonStergeCos.addEventListener("click", () => {
   cart = {}; 
   updateDOM(); 
-  localStorage.removeItem('cart'); 
+
 });
-  
-  
+

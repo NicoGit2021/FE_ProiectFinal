@@ -2,102 +2,99 @@
     "plante_interior":[
         {
             "id": 1,
-            "img_src": "Imagini/ficus-elastica.jpg",
-            "img_alt": "ficus elastica", 
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "ficus elastica", 
             "title": "Ficus elastica (Ficus cauciuc)",
             "description": "Plantă cu frunze mari, lucioase, verzi sau cu margini roșiatice. Ușor de întreținut, preferă lumină indirectă și udare moderată.",
             "price": 500
         },
         {
             "id": 2,
-            "img_src": "Imagini/monstera deliciosa.jpg",
-            "img-alt": "monstera deliciosa",
+            "img": "Imagini/monstera-deliciosa.jpg",
+            "alt": "monstera deliciosa",
             "title": "Monstera deliciosa",
             "description": "Cunoscută pentru frunzele mari, perforate, cu aspect exotic. Are nevoie de lumină filtrată și umiditate moderată.",
             "price": 400
         }, 
         {
             "id": 3,
-            "img_src": "Imagini/monstera deliciosa.jpg",
-            "img-alt": "monstera deliciosa",
+            "img": "Imagini/pothos.jpg",
+            "alt": "monstera deliciosa",
             "title": "Ficus lyrata",
             "description": " Frunze mari, lucioase, în formă de vioară. Preferă lumină puternică și udare regulată.",
             "price": 600
         }, 
         {
             "id": 4,
-            "img_src": "Imagini/monstera deliciosa.jpg",
-            "img-alt": "monstera deliciosa",
+            "img": "Imagini/sansevieria.jpg",
+            "alt": "monstera deliciosa",
             "title": "Ficus lyrata",
             "description": " Frunze mari, lucioase, în formă de vioară. Preferă lumină puternică și udare regulată.",
             "price": 600
         }, 
         {
             "id": 5,
-            "img_src": "Imagini/monstera deliciosa.jpg",
-            "img-alt": "monstera deliciosa",
+            "img": "Imagini/spatyphilum.jpg",
+            "alt": "monstera deliciosa",
             "title": "Dracaena marginata",
             "description": "Frunze subțiri, lungi, cu margini roșii. Preferă lumină indirectă și udare moderată.",
             "price": 450
         },
         {
             "id": 6,
-            "img_src": "Imagini/monstera deliciosa.jpg",
-            "img-alt": "monstera deliciosa",
+            "img": "Imagini/pexels-anna-nekrashevich-8989355.jpg",
+            "alt": "monstera deliciosa",
             "title": "Philodendron",
             "description": "Planta cu frunze mari, verzi, ușor de întreținut. Se adaptează la condiții de lumină scăzută.",
             "price": 450
           },
           {
             "id": 7,
-            "img_src": "Imagini/sansevieria.jpg",
-            "img_alt": "sansevieria",
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "sansevieria",
             "title": "Sansevieria trifasciata (Limba soacrei)",
             "description": "Frunze verticale, verzi cu dungi galbene. Foarte rezistentă și ușor de întreținut.",
             "price": 300
           },
           {
             "id": 8,
-            "img_src": "Imagini/epipremnum.jpg",
-            "img_alt": "epipremnum aureum",
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "epipremnum aureum",
             "title": "Epipremnum aureum (Pothos)",
             "description": "Planta cățărătoare cu frunze verzi sau variegate. Crește rapid și se adaptează ușor.",
             "price": 250
           },
           {
             "id": 9,
-            "img_src": "Imagini/codiaeum.jpg",
-            "img_alt": "codiaeum variegatum",
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "codiaeum variegatum",
             "title": "Codiaeum variegatum (Croton)",
             "description": "Frunze colorate în nuanțe de galben, roșu și verde. Necesită lumină puternică și udare regulată.",
             "price": 550
           },
           {
             "id": 10,
-            "img_src": "Imagini/neoregalia.jpg",
-            "img_alt": "neoregalia",
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "neoregalia",
             "title": "Neoregalia",
             "description": "Planta cu frunze colorate și flori spectaculoase. Preferă lumină indirectă și umiditate ridicată.",
             "price": 650
           },
           {
             "id": 11,
-            "img_src": "Imagini/bromelia.jpg",
-            "img_alt": "bromelia",
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "bromelia",
             "title": "Bromelia",
             "description": "Planta cu flori colorate și frunze rigide. Necesită lumină puternică și udare moderată.",
             "price": 700
           },
           {
             "id": 12,
-            "img_src": "Imagini/alocasia-polly.jpg",
-            "img_alt": "alocasia polly",
+            "img": "Imagini/ficus-elastica.jpg",
+            "alt": "alocasia polly",
             "title": "Alocasia Polly",
             "description": "Frunze mari, lucioase, în formă de inimă. Preferă lumină indirectă și umiditate ridicată.",
             "price": 600
           }
         ]
-}
-
-
-
+    }
