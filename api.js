@@ -11,7 +11,7 @@ export async function createProduct(produs){
         let raspuns = await date_server.json();
         return raspuns;
     }
-}
+
 
 // Read
 

@@ -59,7 +59,9 @@ function loadProducts(){
   if (startingIndex >= plante_interior.length) {
     loadMoreBtn.disabled = true;
     loadMoreBtn.removeEventListener("click", loadProducts);
-    alert("Nu mai sunt produse de afisat")
+    // alert("Nu mai sunt produse de afisat")
+    loadMoreBtn.classList.add("btn-inactiv");
+    loadMoreBtn.textContent = "Nu mai sunt produse de afisat";
     return;
   }
    const produseDeIncarcat = plante_interior.slice(startingIndex, endingIndex);
@@ -70,6 +72,18 @@ function loadProducts(){
 
   startingIndex = endingIndex;
   endingIndex = Math.min(endingIndex + 6, plante_interior.length);
+}
+
+// Notificari
+function afiseazaNotificareCos(mesaj) {
+  const notificare = document.getElementById('notificare-cos');
+  notificare.textContent = mesaj;
+  notificare.classList.remove('ascuns');
+  notificare.classList.add('vizibil');
+  setTimeout(() => {
+    notificare.classList.remove('vizibil');
+    notificare.classList.add('ascuns');
+  }, 2000);
 }
 
 
@@ -114,7 +128,8 @@ imgProdus.src = produs.img;
  
   butonCos.addEventListener("click", () => {
     addToCart(produs.title, produs.price);
-    alert("Produsul a fost adaugat in cos");
+    // alert("Produsul a fost adaugat in cos");
+    afiseazaNotificareCos("Produs adăugat în coș!");
     
   });
   
@@ -193,23 +208,32 @@ function removeFromCart(product){
 function updateDOM(){
 let cart_list = document.querySelector('#cart-list');
 let spanPret = document.querySelector('#total');
+let spanCant = document.querySelector('#total-cant');
+let totalInfo = document.querySelector("#totaluri");
+
 
 cart_list.innerHTML = '';
 let total = 0;
+let totalCantitate = 0;
 
 for (let product in cart){
   total += cart[product].pret * cart[product].cantitate;
+  totalCantitate += cart[product].cantitate;
+
   let li = document.createElement('li');
-  li.innerHTML = `${product} - ${cart[product].cantitate} unitati. <br> Pret per unitate: ${cart[product].pret} MDL`;
+  li.innerHTML = `<p>${product} - ${cart[product].cantitate} unitati.</p> <p>Pret per unitate: ${cart[product].pret} MDL</p>`;
   let buttonRemove = document.createElement('button');
   buttonRemove.classList.add("btn-remove");
   buttonRemove.textContent = 'Scoate o unitate';
   buttonRemove.onclick = () => removeFromCart(product);
   li.insertAdjacentElement('beforeend', buttonRemove);
+  let horizontalLine = document.createElement("div")
+  horizontalLine.classList.add("linie-orizontala");
+  cart_list.appendChild(horizontalLine);
   cart_list.insertAdjacentElement('beforeend', li);
 
 }
-
+spanCant.textContent = totalCantitate;
 spanPret.textContent = total;
 }
 

@@ -27,10 +27,11 @@
 
 <!-- Sectiunea de start -->
       <section id="hero-section">
+        <div id="opaque">  </div>
         <article id="hero-text">
           <h1>Armonia naturii in casa ta!</h1>
           <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-          <button type="button" class="vezi_produse"><a href="#categorii_produse">Vezi produse</a><i class="fa-solid fa-arrow-right"></i></button>
+          <a class ="vezi_produse" href="#produse">Vezi produse <i class="fa-solid fa-arrow-right"></i></a>
         </article>
       </section>
 
@@ -157,10 +158,14 @@
 
 
 <!-- ShoppingCart Interfata -->
+  <div id="notificare-cos" class="notificare-cos ascuns">Produs adăugat în coș!</div>
   <section id="shopping-cart">
     <h2>Cos de cumparaturi</h2>
     <ul id="cart-list"></ul>
-    <p id="pret-cos-total">Pret total: <span id="total"></span> MDL</p>
+    <div id="totaluri">
+    <p class="cos-total">Total produse: <span id="total-cant"></span> unitati</p>
+    <p class="cos-total">Pret total: <span id="total"></span> MDL</p>
+    </div>
     <button id="sterge-cos-btn">Sterge cosul</button>
     <a id="trimite-comanda" href="livrare.html">Trimite comanda</a>
   </section>
